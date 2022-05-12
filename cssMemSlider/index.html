@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cssMemSlider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main class="wrapper">
+
+        <input type="radio" name="mem" id="mem_1" checked>
+        <input type="radio" name="mem" id="mem_2">
+        <input type="radio" name="mem" id="mem_3">
+        <input type="radio" name="mem" id="mem_4">
+
+        <div class="slider">
+            <figure class="slide" id="img_1"><img src="./img/dvor.jpg" alt="OOPS..."></figure>
+            <figure class="slide" id="img_2"><img src="./img/mario.jpg" alt="OOPS..."></figure>
+            <figure class="slide" id="img_3"><img src="./img/shirokaya.jpg" alt="OOPS..."></figure>
+            <figure class="slide" id="img_4"><img src="./img/truba.jpg" alt="OOPS..."></figure>
+        </div>
+
+        <div class="descriptions_controls">
+            <div class="descriptions">
+                <div class="description" id="dscr_1">Claustrophobic dream</div>
+                <div class="description" id="dscr_2">Hello, Bro!!!</div>
+                <div class="description" id="dscr_3">The best helper</div>
+                <div class="description" id="dscr_4">Don't touch my porch</div>
+            </div>
+            <div class="controls">
+                <label for="mem_1" class="control" id="ctrl_1"></label>
+                <label for="mem_2" class="control" id="ctrl_2"></label>
+                <label for="mem_3" class="control" id="ctrl_3"></label>
+                <label for="mem_4" class="control" id="ctrl_4"></label>
+            </div>
+        </div>
+        
+    </main>
 </body>
 </html>
