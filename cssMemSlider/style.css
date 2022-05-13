@@ -368,36 +368,49 @@ textarea {
 /* Reset CSS end */
 
 /* --------------------CSS Styles Start-------------------- */
+html {
+    background: #313131;
+}
+
 input {
     display: none; 
 }
 
 .wrapper {
-    width: 100%;
+    width: 60%;
     overflow: hidden;
+    margin: 3rem auto;
 }
 
 .slider {
+    display: flex;
     width: 400%;
-    transition: 0.6s;
+    transition: 1s;
 }
 
 .slide {
     width: 25%; /* 100 / 4 = 25 */
-}
+    }
 
 .slide img {
     width: 100%;
+    border-radius: 3%;
 }
 
 .descriptions_controls {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
 }
 
 .description {
-    height: 0px;
+    height: 0;
     visibility: hidden;
+    color: aliceblue;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: all 1s;
 }
 
 /* Переключение текста */
@@ -407,11 +420,12 @@ input {
 #mem_4:checked ~ .descriptions_controls > .descriptions > #dscr_4 {
     visibility: visible;
     height: auto;
+    opacity: 1;
 }
 
 .controls {
     display: flex;
-    background: green;
+    background: #313131;
 }
 
 .control {
@@ -426,9 +440,9 @@ input {
     display: block;
     width: 0.5rem;
     height: 0.5rem;
-    border: solid 2px yellow;
+    border: solid 2px #b3d4fc;
     border-radius: 50%;
-    background: blueviolet;
+    background: #b3d4fc;
 }
 
 .control:hover {
@@ -439,23 +453,42 @@ input {
 #mem_2:checked ~ .descriptions_controls > .controls > #ctrl_2 > p,
 #mem_3:checked ~ .descriptions_controls > .controls > #ctrl_3 > p,
 #mem_4:checked ~ .descriptions_controls > .controls > #ctrl_4 > p {
-    border: solid 2px yellow;
-    background: green;
+    border: solid 2px #b3d4fc;
+    background: #313131;
 }
 
 #mem_1:checked ~ .descriptions_controls > .controls > #ctrl_1:hover > p,
 #mem_2:checked ~ .descriptions_controls > .controls > #ctrl_2:hover > p,
 #mem_3:checked ~ .descriptions_controls > .controls > #ctrl_3:hover > p,
 #mem_4:checked ~ .descriptions_controls > .controls > #ctrl_4:hover > p {
-    border: solid 4px yellow;
+    border: solid 4px #b3d4fc;
 }
 
 .control:hover > p {
-    border: solid 4px yellow;
+    border: solid 4px #b3d4fc;
+}
+
+.control:active > p {
+    border: solid 4px #77b877;
 }
 
 /* Слайдер */
 
+#mem_1:checked ~ .slider {
+    transform: translateX(0);
+  }
+
+#mem_2:checked ~ .slider {
+    transform: translateX(-25%);
+}
+
+#mem_3:checked ~ .slider {
+    transform: translateX(-50%);
+}
+
+#mem_4:checked ~ .slider {
+    transform: translateX(-75%);
+}
 
 
 /* --------------------CSS Styles End-------------------- */
