@@ -1,5 +1,4 @@
 /* Reset CSS start */
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -366,5 +365,49 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-
 /* Reset CSS end */
+
+/* CSS Styles Start */
+/*input {
+    display: none; 
+}*/
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    width: 400%;
+    transition: 0.6s;
+}
+
+.slide {
+    width: 25%; /* 100 / 4 = 25 */
+}
+
+.slide img {
+    width: 100%;
+}
+
+.descriptions_controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    height: 0px;
+    visibility: hidden;
+}
+
+/* Переключение текста */
+#mem_1:checked ~ .descriptions_controls > .descriptions > #dscr_1,
+#mem_2:checked ~ .descriptions_controls > .descriptions > #dscr_2,
+#mem_3:checked ~ .descriptions_controls > .descriptions > #dscr_3,
+#mem_4:checked ~ .descriptions_controls > .descriptions > #dscr_4 {
+    visibility: visible;
+    height: auto;
+}
+
+
+/* CSS Styles End */
