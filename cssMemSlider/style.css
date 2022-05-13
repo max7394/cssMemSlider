@@ -367,10 +367,10 @@ textarea {
 }
 /* Reset CSS end */
 
-/* CSS Styles Start */
-/*input {
+/* --------------------CSS Styles Start-------------------- */
+input {
     display: none; 
-}*/
+}
 
 .wrapper {
     width: 100%;
@@ -409,5 +409,53 @@ textarea {
     height: auto;
 }
 
+.controls {
+    display: flex;
+    background: green;
+}
 
-/* CSS Styles End */
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 2rem;
+}
+
+.control > p {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: solid 2px yellow;
+    border-radius: 50%;
+    background: blueviolet;
+}
+
+.control:hover {
+    cursor: pointer;
+}
+
+#mem_1:checked ~ .descriptions_controls > .controls > #ctrl_1 > p,
+#mem_2:checked ~ .descriptions_controls > .controls > #ctrl_2 > p,
+#mem_3:checked ~ .descriptions_controls > .controls > #ctrl_3 > p,
+#mem_4:checked ~ .descriptions_controls > .controls > #ctrl_4 > p {
+    border: solid 2px yellow;
+    background: green;
+}
+
+#mem_1:checked ~ .descriptions_controls > .controls > #ctrl_1:hover > p,
+#mem_2:checked ~ .descriptions_controls > .controls > #ctrl_2:hover > p,
+#mem_3:checked ~ .descriptions_controls > .controls > #ctrl_3:hover > p,
+#mem_4:checked ~ .descriptions_controls > .controls > #ctrl_4:hover > p {
+    border: solid 4px yellow;
+}
+
+.control:hover > p {
+    border: solid 4px yellow;
+}
+
+/* Слайдер */
+
+
+
+/* --------------------CSS Styles End-------------------- */
