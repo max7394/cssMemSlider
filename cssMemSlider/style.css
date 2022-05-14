@@ -492,6 +492,10 @@ input {
 
 
 @media screen and (max-width: 599px) {
+    .wrapper {
+        width: 80%;
+    }
+    
     .description {
         font-size: 1rem;
     }
